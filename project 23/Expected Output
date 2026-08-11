@@ -1,0 +1,56 @@
+write Operation:
+
+DIN
+A1
+B2
+C3
+D4
+
+Read Operation:
+
+DOUT
+A1
+B2
+C3
+D4
+
+At the beginning:
+
+EMPTY = 1
+FULL  = 0
+
+After writing four values:
+
+EMPTY = 0
+FULL  = 0
+
+After reading all four values:
+
+EMPTY = 1
+FULL  = 0
+📈 Expected Waveform
+
+Observe these signals in the simulator:
+
+CLK     : _|-|_|-|_|-|_|-|_|-|_
+
+WR_EN   : ____|‾‾‾‾‾‾‾‾|________
+
+RD_EN   : ________________|‾|_|‾|_|‾|_|‾|_
+
+DIN     : ____A1___B2___C3___D4________
+
+DOUT    : _____________________A1___B2___C3___D4
+
+EMPTY   : ‾‾‾‾‾‾__________________________‾‾‾‾
+
+FULL    : ________________________________
+🛠️ Tools Used
+Verilog HDL
+Xilinx Vivado
+ModelSim
+Icarus Verilog
+GTKWave
+🎯 Applications
+
+Synchronous FIFOs are commonly used in:
